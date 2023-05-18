@@ -11,10 +11,10 @@ document.getElementById('btn-submit').addEventListener('click' ,function(){
 
 
    if(email === 'nasir@gmail.com' && password === 'secret'){
-    console.log('valid user');
+    window.location.href='bank.html';
    }
    else{
-    console.log('invalid user')
+    alert('you forgot the password , you are going to be punished')
    }
 })
 
