@@ -13,20 +13,23 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
    
 
 
-    const currentwithDrawTotal = previousWithdrawTotal + newWithdrawAmount;
-    withdrawTotalElement.innerText = currentwithDrawTotal;
-
-
     const balanceTotalElement = document.getElementById('balance-total');
     const previuosBalanceTotalString = balanceTotalElement.innerText;
     const previousBalanceTotal = parseFloat(previuosBalanceTotalString);
+     
+    withDrawField.value ='';
+
+    if(newWithdrawAmount> previousBalanceTotal){
+        alert('tomar baaper bank e eto tk nai')
+        return;
+    }
+    const currentwithDrawTotal = previousWithdrawTotal + newWithdrawAmount;
+    withdrawTotalElement.innerText = currentwithDrawTotal;
 
     // console.log(previousBalanceTotal);
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
     balanceTotalElement.innerText = newBalanceTotal;
 
 
-
-
-    withDrawField.value ='';
+    
 })
