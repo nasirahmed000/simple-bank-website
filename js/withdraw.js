@@ -20,7 +20,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     withDrawField.value ='';
 
     if(newWithdrawAmount> previousBalanceTotal){
-        alert('tomar baaper bank e eto tk nai')
+        alert('tomar baaper bank e eto tk nai ')
         return;
     }
     const currentwithDrawTotal = previousWithdrawTotal + newWithdrawAmount;
